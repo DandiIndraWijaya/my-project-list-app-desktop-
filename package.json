@@ -16,7 +16,8 @@
       "output": "dist"
     },
     "win": {
-      "target": "nsis" 
+      "target": "portable",
+      "icon": "app_icon.ico"
     }
   },
   "scripts": {
