@@ -1,0 +1,43 @@
+# Node modules
+node_modules/
+
+# Output folders
+/dist/
+/out/
+/build/
+/release/
+
+# Build artifacts
+*.log
+*.tsbuildinfo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VSCode config (optional, kalau kamu mau share workspace setting, hapus baris ini)
+.vscode/
+
+# Electron build cache
+.cache/
+
+# Env files (jika ada config lokal seperti API key, token, dll)
+.env
+.env.local
+.env.production
+.env.development
+
+# Installer output (dari electron-builder)
+*.exe
+*.dmg
+*.AppImage
+*.snap
+*.msi
+*.deb
+*.rpm
+
+# Coverage (kalau pakai testing)
+coverage/
+
+# Mac-specific
+Icon?

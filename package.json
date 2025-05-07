@@ -1,0 +1,34 @@
+{
+  "name": "my-projects",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "build": {
+    "appId": "com.dandiindrawijaya.myprojects",
+    "productName": "My Projects",
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "renderer.js"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis" 
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^36.1.0",
+    "electron-builder": "^26.0.12"
+  }
+}
