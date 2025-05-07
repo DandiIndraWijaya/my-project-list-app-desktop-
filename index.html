@@ -16,6 +16,11 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    button{
       cursor: pointer;
     }
   
@@ -37,12 +42,38 @@
       font-weight: bold;
       font-size: 14px;
     }
+
+    .reload-button {
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    
+    .reload-button:hover {
+      background-color: #e2e2e2;
+      transform: scale(1.05);
+    }
+    
+    .reload-button:active {
+      transform: scale(0.97);
+    }
+    
   </style>
 </head>
 <body>
   <h1>My Projects</h1>
-  <button onclick="window.electronAPI.reloadWindow()">🔄 Reload</button>
-  <br>
+  <div style="display: flex; align-items: center; gap: 0.5rem; margin: 1rem;">
+    <input id="search-input" type="text" placeholder="Search projects..." style="width: 300px; padding: 0.5rem; font-size: 1rem; border-radius: 8px; border: 1px solid #ccc;">
+    <button class="reload-button" onclick="window.electronAPI.reloadWindow()">🔄 Reload</button>
+  </div>
   <div id="project-list" style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem;"></div>
   <script src="./renderer.js"></script>
 </body>

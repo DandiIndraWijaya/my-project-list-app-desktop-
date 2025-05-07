@@ -46,6 +46,22 @@ ipcMain.handle('open-project', async (_event, projectName) => {
    exec(`start explorer ${projectPath}`);
 })
 
+ipcMain.handle('open-vscode', async (_event, projectName) => {
+  const projectPath = path.join(PROJECTS_DIR, projectName);
+  exec(`code "${projectPath}"`);
+});
+
+ipcMain.handle('open-terminal', async (_event, projectName) => {
+  const projectPath = path.join(PROJECTS_DIR, projectName);
+  exec(`start cmd /K "cd /d ${projectPath}"`);
+});
+
+ipcMain.handle('open-explorer', async (_event, projectName) => {
+  const projectPath = path.join(PROJECTS_DIR, projectName);
+  exec(`start "" "${projectPath}"`);
+});
+
+
 ipcMain.on('reload-window', () => {
   BrowserWindow.getFocusedWindow()?.reload();
 });
